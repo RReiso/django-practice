@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []  # domains where you allow your application to run
 # Application definition
 
 INSTALLED_APPS = [
+    'students.apps.StudentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,4 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+# Static file configuration
+STATIC_URL = '/static/'  # keyword static is used in templates
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    'djangobasics/static',
+]
