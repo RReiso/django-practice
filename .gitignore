@@ -1,2 +1,3 @@
 foodenv
 .env
+__pycache__
