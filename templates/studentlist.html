@@ -23,23 +23,18 @@
           </tr>
         </thead>
         <tbody>
+          {% for student in students %}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{student.roll_no}}</th>
+            <td>{{student.full_name}}</td>
+            <td>
+              <img style="width: 100px" src="{{student.photo.url}}" alt="" />
+            </td>
+            <td>{{student.course}}</td>
+            <td>{{student.grade}}</td>
+            <td>{{student.section}}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

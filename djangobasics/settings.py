@@ -129,3 +129,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     'djangobasics/static',
 ]
+
+
+# Media file configuration
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
